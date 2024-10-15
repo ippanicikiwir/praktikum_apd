@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106082_ikhwan hariyant0_B2_24_posttest2"/>
+        <attribute name="authors" value="Lenovo-GK"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 11:54:58 PM"/>
+        <attribute name="created" value="TGVub3ZvLUdLO0lQUEFOOzIwMjQtMDktMTg7MTA6MzA6MjQgUE07MjQ3NA=="/>
+        <attribute name="edited" value="TGVub3ZvLUdLO0lQUEFOOzIwMjQtMDktMTg7MTE6NTQ6NTggUE07MTsyNTk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nim" type="Integer" array="False" size=""/>
+            <declare name="hbeli, hdiskon, sisad, totalhd, jumlah, hargab, diskon, harga" type="Real" array="False" size=""/>
+            <declare name="namab" type="String" array="False" size=""/>
+            <assign variable="harga" expression="0"/>
+            <output expression="&quot;masukan nama barang&quot;" newline="True"/>
+            <input variable="namab"/>
+            <output expression="&quot;masukan harga barang&quot;" newline="True"/>
+            <input variable="hargab"/>
+            <output expression="&quot;masukan jumlah barang&quot;" newline="True"/>
+            <input variable="jumlah"/>
+            <output expression="&quot;masukan nim akhir&quot;" newline="True"/>
+            <input variable="nim"/>
+            <assign variable="hbeli" expression="hargab * jumlah"/>
+            <assign variable="diskon" expression="nim/100"/>
+            <assign variable="hdiskon" expression="hargab * diskon"/>
+            <assign variable="totalhd" expression="hargab - hdiskon"/>
+            <assign variable="sisad" expression="diskon%3"/>
+            <output expression="&quot;anda membeli &quot; &amp; namab &amp; &quot; dengan harga &quot;  &amp; hargab &amp; &quot; total harga sebelum diskon &quot; &amp; hbeli &amp; &quot; dengan diskon &quot; &amp; totalhd &amp; &quot; total yang harus di bayar &quot; &amp; hdiskon &amp; &quot; dengan sisa diskon &quot; &amp; sisad" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

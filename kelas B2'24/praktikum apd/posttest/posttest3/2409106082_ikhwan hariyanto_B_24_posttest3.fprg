@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="postest 3"/>
+        <attribute name="authors" value="Lenovo-GK"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 07:05:08 PM"/>
+        <attribute name="created" value="TGVub3ZvLUdLO0lQUEFOOzIwMjQtMDktMjQ7MDk6MDM6MTIgUE07MjQ3Ng=="/>
+        <attribute name="edited" value="TGVub3ZvLUdLO0lQUEFOOzIwMjQtMDktMjU7MDc6MDU6MDggUE07NTsyNTk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="beratmg, tinggikm, bmi, tinggim, beratkg, berat, tinggi" type="Real" array="False" size=""/>
+            <output expression="&quot;input berat badan dalam mg&quot;" newline="True"/>
+            <input variable="berat"/>
+            <assign variable="beratkg" expression="berat * 0.000001"/>
+            <output expression="&quot;input tinggi dalam km&quot;" newline="True"/>
+            <input variable="tinggi"/>
+            <assign variable="tinggim" expression="tinggi * 1000"/>
+            <assign variable="bmi" expression="beratkg / (tinggim * tinggim)"/>
+            <output expression="&quot;berat badan&quot; &amp; beratkg &amp; &quot;kg&quot; &amp; &quot; tinggi badan &quot;  &amp; tinggim &amp; &quot; index bmi &quot; &amp;  bmi" newline="True"/>
+            <if expression="bmi &lt; 18.5">
+                <then>
+                    <output expression="&quot;berat badan anda kurang (semangangat naikin berat badan)&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="bmi &lt; 24.9">
+                        <then>
+                            <output expression="&quot;berat badan anda normal (teruskan kawan)&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="bmi &lt; 29.9">
+                                <then>
+                                    <output expression="&quot;berat badan anda berlebihan (hayya kebanyakan ngewibu)&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;obesitas kamu kurang-kuranginlah nonton anime mu mending workout&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
